@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Калинин" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8qx-gV-z7a">
+                                <rect key="frame" x="8" y="76" width="398" height="199"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-ez-3le">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="199"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CGy-Uo-VhI">
+                                        <rect key="frame" x="203" y="0.0" width="195" height="199"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8qx-gV-z7a" secondAttribute="height" multiplier="1:0.5" id="CuQ-yS-Tg0"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUD-Wv-tro">
+                                <rect key="frame" x="167" y="345" width="80" height="30"/>
+                                <state key="normal" title="Load Image"/>
+                                <connections>
+                                    <action selector="loadImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9z-QF-yYy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wb-RM-YkH">
+                                <rect key="frame" x="167.5" y="415" width="79" height="30"/>
+                                <state key="normal" title="Save Image"/>
+                                <connections>
+                                    <action selector="saveImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNF-VM-kZ4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8qx-gV-z7a" secondAttribute="trailing" constant="8" id="9vY-Y7-6Vj"/>
+                            <constraint firstItem="AUD-Wv-tro" firstAttribute="top" secondItem="8qx-gV-z7a" secondAttribute="bottom" constant="70" id="NBq-Z3-ZjL"/>
+                            <constraint firstItem="AUD-Wv-tro" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PeF-hy-XMh"/>
+                            <constraint firstItem="6Wb-RM-YkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d4p-oS-Wgh"/>
+                            <constraint firstItem="8qx-gV-z7a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="pAI-Js-mS3"/>
+                            <constraint firstItem="8qx-gV-z7a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="pQI-xh-1zI"/>
+                            <constraint firstItem="6Wb-RM-YkH" firstAttribute="top" secondItem="AUD-Wv-tro" secondAttribute="bottom" constant="40" id="vC2-lW-6p9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="finishImageView" destination="rAb-ez-3le" id="qhY-2l-rqD"/>
+                        <outlet property="saveButton" destination="6Wb-RM-YkH" id="lyz-a9-4hS"/>
+                        <outlet property="startImageView" destination="CGy-Uo-VhI" id="V1i-eN-zt7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
